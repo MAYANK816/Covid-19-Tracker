@@ -6,7 +6,7 @@ function App() {
   const [data,setdata]=useState([]);
   const getData = async () => {
     try {
-      const result = await fetch("https://api.covid19india.org/data.json");
+      const result = await fetch("https://data.covid19india.org/data.json");
       const actualData = await result.json();
       console.log(actualData.statewise[0]);
       setdata(actualData.statewise[0]);
